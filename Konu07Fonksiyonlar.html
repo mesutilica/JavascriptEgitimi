@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="tr">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Js Fonksiyonlar</title>
+    </head>
+    <body>
+        <h1>Js Fonksiyonlar</h1>
+
+        <div>
+            Js fonksiyonlar c# daki metotlara karşılık gelir.
+        </div>
+
+        <p>
+           Html p elementi paragraf yazıları için kullanılır.
+        </p>
+
+        <script>
+        // Fonksiyon Tanımlama
+        function FonksiyonAdi(parametre) {
+            console.log('Fonksiyona gönderilen değer : ', parametre)
+        }
+        // Fonksiyonu Çağırma
+        FonksiyonAdi("Javascript ile fonksiyon çağırımı")
+
+        FonksiyonAdi("Fonksiyona parametre gönderdik")
+        // Örnek 2
+        function ToplamaYap(sayi1, sayi2) {
+            console.log('Sayıların toplamı : ', sayi1 + sayi2)
+        }
+        ToplamaYap(10, 8)
+
+        function RenkDegistir(arkaplanRengi, yaziRengi) {
+            document.bgColor = arkaplanRengi // document.bgColor javascript kodu document sayfa oluyor, bgColor ise sayfanın arkaplan rengini değiştiren js de var olan property
+            document.fgColor = yaziRengi // fgColor ise sayfadaki yazı rengini değiştiren js özelliği
+        }
+        // RenkDegistir("red", "white")
+
+        var icgenislik = window.innerWidth; // window nesnesi de javascript de hazır gelen bir diğer nesnedir ve içerisinde sayfanın çalıştığı pencereyle alakalı yapabileceğimiz hazır işlemleri barındırır.
+        var icyukseklik = window.innerHeight; // innerHeight özelliği bize tarayıcı pencere yüksekliğini verir
+        // Dış ölçüler        
+        var disgenislik = window.outerWidth;
+        var disyukseklik = window.outerHeight;
+
+        document.write("<h3>Pencere iç genişliği : " + icgenislik + "</h3>");
+        document.write("<h3>Pencere iç yüksekliği : " + icyukseklik + "</h3>"); // ekrana bir şey yazdırırken html elementleri de kullanabiliriz
+
+        document.write("<h3>Pencere dış genişliği : " + disgenislik + "</h3>");
+        document.write("<h3>Pencere dış yüksekliği : " + disyukseklik + "</h3>");
+
+        if (icgenislik > 505) {
+            RenkDegistir("red", "white")
+        }
+    </script>
+    </body>
+</html>

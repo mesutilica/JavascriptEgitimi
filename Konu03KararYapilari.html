@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Karar Yapıları</title>
+</head>
+<body>
+    <h1>Js Karar Yapıları</h1>
+    <script>
+        let sayi = -10;
+        if (sayi > 0) {
+            console.log('Sayı ' + sayi + ' sıfırdan büyüktür')
+        } else if (sayi == 0) {
+            console.log('Sayı ' + sayi + ' sıfırdır')
+        } 
+        else {
+            console.log('Sayı ' + sayi + ' sıfırdan küçüktür')
+        }
+
+        // Elimizde kontrol edeceğimiz sadece 2 seçenek varsa kısa if yapısını kullanabiliriz
+        sayi > 0 ? console.log('Sayı ' + sayi + ' sıfırdan büyüktür') : console.log('Sayı ' + sayi + ' sıfırdan küçüktür')
+    </script>
+</body>
+</html>
