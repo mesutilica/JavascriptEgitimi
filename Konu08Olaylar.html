@@ -38,8 +38,8 @@
 
         <h3>Onclick Örnek 2 - Cinsiyet Seçme</h3>
         <form name="cinsiyet">
-            <input type="radio" name="cins" value="Kadin"> Kadın
-            <input type="radio" name="cins" value="Erkek"> Erkek
+            <input type="radio" name="cins"> Kadın
+            <input type="radio" name="cins"> Erkek
             <input type="button" value="Seç" onclick="goster()">
         </form>
         <!-- Yorum satırı -->
@@ -132,18 +132,19 @@
                 return select.options[select.selectedIndex].value // buraya gelen option içindeki value yani değeri döndürdük
             }
         </script>
-
         <hr>
 
         <h3>onSubmit Olayı</h3>
 
         <p>
-            OnSubmit olayı bir form sunucuya gönderilmek üzere tetiklendiğinde çalışır.
+            OnSubmit olayı bir form sunucuya gönderilmek üzere tetiklendiğinde
+            çalışır.
         </p>
 
         <form name="form1" onsubmit="veriKontrol()">
             <b>Tc No : </b>
-            <input type="number" name="tcnumarasi" id="tcno" maxlength="11" minlength="11">
+            <input type="number" name="tcnumarasi" id="tcno" maxlength="11"
+                minlength="11">
             <input type="submit" value="Kaydet">
         </form>
 
@@ -160,6 +161,24 @@
                 }
             }
         </script>
+        <h2 id="olayBaslik">addEventListener Metodu</h2>
+        <p id="olayDinleme" class="brd"></p>
 
+        <p>Javascript de addEventListener Metodu ile sayfadaki olayları
+            dinleyebiliriz</p>
+
+        <button onclick="removeHandler()">addEventListener Sil</button>
+
+        <script>
+            function ornekFunction() {
+                document.getElementById("olayDinleme").innerHTML = "addEventListener çalıştı!";
+            }
+            // addEventListener Ekleme
+            document.getElementById("olayBaslik").addEventListener("click", ornekFunction);
+            // addEventListener Silme
+            function removeHandler() {
+                document.getElementById("olayBaslik").removeEventListener("click", ornekFunction);
+            }
+        </script>
     </body>
 </html>

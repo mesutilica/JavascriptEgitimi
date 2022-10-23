@@ -101,23 +101,5 @@ document.getElementById("sinifSeciciId").innerText = sinifSecici[0].innerText;
         </script>
         <hr>
 
-        <h2 id="olayBaslik">addEventListener Metodu</h2>
-        <p id="olayDinleme" class="brd"></p>
-
-        <p>Javascript de addEventListener Metodu ile sayfadaki olayları dinleyebiliriz</p>
-
-        <button onclick="removeHandler()">addEventListener Sil</button>
-
-        <script>
-            function ornekFunction() {
-                document.getElementById("olayDinleme").innerHTML = "addEventListener çalıştı!";
-            }
-            // addEventListener Ekleme
-            document.getElementById("olayBaslik").addEventListener("click", ornekFunction);
-            // addEventListener Silme
-            function removeHandler() {
-                document.getElementById("olayBaslik").removeEventListener("click", ornekFunction);
-            }
-        </script>
     </body>
 </html>
