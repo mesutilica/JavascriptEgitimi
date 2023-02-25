@@ -1,31 +1,31 @@
 <!DOCTYPE html>
 <html lang="tr">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Javascript Giriş</title>
-</head>
-<body>
-    <h1>Javascript Eğitimi</h1>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Javascript Giriş</title>
+    </head>
+    <body>
+        <h1>Javascript Eğitimi</h1>
 
-    <h2>Javascript Front End Kütüphaneleri</h2>
+        <h2>Javascript Front End Kütüphaneleri</h2>
 
-    <p>
-        Angular(Google), React(Facebook), VueJs SPA(Single page application)
-    </p>
+        <p>
+            Angular(Google), React(Facebook), VueJs SPA(Single page application)
+        </p>
 
-    <p>
-        Jquery : Javascript kodlarını daha pratik hale getirmek için.
-    </p>
+        <p>
+            Jquery : Javascript kodlarını daha pratik hale getirmek için.
+        </p>
 
-    <p>
-        Javascript kodları <script></script> tagları arasına yazıyoruz.
-    </p>
+        <p>
+            Javascript kodları <script></script> tagları arasına yazıyoruz.
+        </p>
 
-    <h3>Javascript ile ekrana yazı yazdırma</h3>
+        <h3>Javascript ile ekrana yazı yazdırma</h3>
 
-    <script>
+        <script>
         document.writeln("Bu yazı js document.writeln metoduyla yazıldı");
         document.write("Bu yazı js document.write metoduyla yazıldı");
         console.log("console.log ile js uygulamalarımızda verileri kullanıcının görmediği konsol ekranına yazdırabiliriz");
@@ -36,14 +36,19 @@
         console.log('Ürün Adı : ', urunAdi);
         console.log('Ürün Fiyatı : ', urunFiyati)
         console.log('Ürün Kdv : ', kdv);
-        console.log('Meslek : ', meslek);
+        console.info('Meslek : ', meslek); // meslek aşağıda var ile tanımlanırsa undefinet, let ile tanımlanırsa ReferenceError hatası verir
         // Let ile değişken tanımlama
-        let isim; let soyisim; var meslek;
+        let isim; let soyisim; var meslek; // meslek buradan aşağıda kullanılabilir
         isim = "Ali";
         soyisim = "Deniz";
         meslek = "Yazılım Uzmanı"
-        console.log('Kullanıcı Bilgileri : ' + isim + ' ' + soyisim + ' Meslek : ' + meslek);
+        console.warn('Kullanıcı Bilgileri : ' + isim + ' ' + soyisim + ' Meslek : ' + meslek);
+        console.error('Hata Oluştu!')
 
+        // Tarih
+        let odemeTarihi = new Date();
+        console.warn("Ödeme Tarihi : ", odemeTarihi);
+        
         // Javascript Sabitler
         // Değerinin değişmesini istemediğimiz verileri sabit ile tanımlarız
         const sabitDeger = "Bu yazı sabittir sonradan değiştirilemez";
@@ -52,6 +57,5 @@
         console.log(sabitDeger);
 
     </script>
-
-</body>
+    </body>
 </html>
